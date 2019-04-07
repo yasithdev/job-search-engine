@@ -1,2 +1,2 @@
-craigslist.txt filter=lfs diff=lfs merge=lfs -text
-theladders.txt filter=lfs diff=lfs merge=lfs -text
+data/craigslist.txt filter=lfs diff=lfs merge=lfs -text
+data/theladders.txt filter=lfs diff=lfs merge=lfs -text
