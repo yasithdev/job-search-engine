@@ -17,7 +17,7 @@ class CrawlerPipeline(object):
 
     def open_spider(self, spider):
         name = spider.name
-        self.file = open(spider.name + '.txt', 'w')
+        self.file = open("data/" + spider.name + '.txt', 'w')
 
     def close_spider(self, spider):
         self.file.close()

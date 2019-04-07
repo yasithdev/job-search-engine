@@ -15,7 +15,7 @@ class CraigslistSpider(scrapy.Spider):
                 'site': 'TheLadders',
                 'url': response.urljoin(result_row.css('a.job-card-title::attr(href)').get()),
                 'datePosted': None,
-                'description': result_row.css('a.job-card-description::text').get(),
+                'description': result_row.css('p.job-card-description::text').get(),
                 'hiredBy': result_row.css('div.job-card-sub-header *::text').get(),
             }
             yield result
