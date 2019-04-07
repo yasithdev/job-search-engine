@@ -40,10 +40,10 @@ if __name__ == '__main__':
     else:
         input('Error in deleting postings')
 
-    with open("craigslist.txt") as craigslist:
+    with open("data/craigslist.txt") as craigslist:
         for posting_str in craigslist.readlines():
             add_to_index(posting_str)
 
-    with open("theladders.txt") as theladders:
+    with open("data/theladders.txt") as theladders:
         for posting_str in theladders.readlines():
             add_to_index(posting_str)
