@@ -12,7 +12,7 @@ function truncate(str, num) {
 
 function postedInfo(date, employee, score) {
     if (date || employee) {
-        return <span>Posted{date? <b> {moment(date).fromNow()}</b> : null}{employee ? ` by ${employee}` : null} | Score: {score}</span>;
+        return <span>Posted{date ? <b> {moment(date).fromNow()}</b> : null}{employee ? ` by ${employee}` : null} | Score: {score}</span>;
     } else {
         return null
     }
@@ -25,7 +25,7 @@ const SearchResult = props => (
                 <Link href={props.item.url}><a>{props.item.title}</a></Link>
             </h5>
             <h6 className="card-subtitle mb-1">
-                <Link href={props.item.url}><a className="text-success">{props.item.url}</a></Link>
+                <Link href={props.item.url}><a className="text-success">{truncate(props.item.url, 80)}</a></Link>
             </h6>
             <p className="card-text">
                 {truncate(props.item.description, 250)}
