@@ -12,7 +12,7 @@ const PageContainer = (props) => (
     <Header />
     <div className="row">
       <div className="col">
-        {props.children}
+        <div className="p-2">{props.children}</div>
       </div>
     </div>
   </div>
