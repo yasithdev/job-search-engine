@@ -2,8 +2,8 @@ import SearchResult from '../components/SearchResult';
 import PageContainer from '../components/PageContainer';
 import { withRouter } from 'next/router'
 import Head from 'next/head'
-import fetch from 'isomorphic-unfetch'
 import SearchBar from '../components/SearchBar';
+import QueryService from '../services/QueryService';
 
 const Page = withRouter(props => (
     <PageContainer>
@@ -18,8 +18,12 @@ const Page = withRouter(props => (
     </PageContainer>
 ));
 
+Page.defaultProps = {
+    queryService: new QueryService()
+}
+
 Page.getInitialProps = async function (props) {
-    const res = await fetch(`http://localhost:9200/postings/_search?q=${props.query.query}`)
+    const res = await new QueryService().query(props.query.query)
     const data = await res.json()
     return data
 }
