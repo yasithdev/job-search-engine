@@ -14,10 +14,28 @@ const pages = (from, size, total, window) => {
     const activePage = Math.floor(from / size) + 1;
     const firstPageInWindow = Math.max(activePage - Math.floor(window / 2), 1);
     const lastPageInWindow = Math.min(firstPageInWindow + window, totalPages);
-    const result = new Array(lastPageInWindow - firstPageInWindow + 1).fill().map((_, i) => i + firstPageInWindow);
-    console.log(result);
-    return result;
+    return new Array(lastPageInWindow - firstPageInWindow + 1).fill().map((_, i) => i + firstPageInWindow);
 }
+
+const Paginator = (props) => (<nav aria-label="pagination">
+    <ul className="pagination justify-content-center">
+        <li className={`page-item ${props.pages.length == 0 || props.page == 1 ? 'disabled' : ''}`}>
+            <Link href={`/search?query=${props.query}&from=${props.size * (props.page - 2)}&size=${props.size}`}>
+                <a className="page-link" tabIndex="-1">&lt;</a>
+            </Link>
+        </li>
+        {props.pages.map(p => <li key={p} className={`page-item ${p == props.page ? 'active' : ''}`}>
+            <Link href={`/search?query=${props.query}&from=${props.size * (p - 1)}&size=${props.size}`}>
+                <a className="page-link">{p}</a>
+            </Link>
+        </li>)}
+        <li className={`page-item ${props.pages.length == 0 || props.page == props.pages[props.pages.length - 1] ? 'disabled' : ''}`}>
+            <Link href={`/search?query=${props.query}&from=${props.size * (props.page)}&size=${props.size}`}>
+                <a className="page-link" tabIndex="-1">&gt;</a>
+            </Link>
+        </li>
+    </ul>
+</nav>);
 
 
 const Page = withRouter(props => (
@@ -28,26 +46,9 @@ const Page = withRouter(props => (
         <SearchBar text={props.router.query.query}></SearchBar>
         <small className="text-muted pt-0 px-1">{props.hits.total.toLocaleString()} results (in {props.took} ms)</small>
         <div className="pt-4">
-            <nav aria-label="Page navigation example">
-                <ul className="pagination justify-content-center">
-                    <li className={`page-item ${props.pages.length == 0 || props.pages[1] == 1 ? 'disabled' : ''}`}>
-                        <Link href={`/search?query=${props.router.query.query}&from=${props.size * (props.page - 2)}&size=${props.size}`}>
-                            <a className="page-link" tabIndex="-1">&lt;</a>
-                        </Link>
-                    </li>
-                    {props.pages.map(p => <li key={p} className={`page-item ${p == props.page ? 'active' : ''}`}>
-                        <Link href={`/search?query=${props.router.query.query}&from=${props.size * (p - 1)}&size=${props.size}`}>
-                            <a className="page-link">{p}</a>
-                        </Link>
-                    </li>)}
-                    <li className={`page-item ${props.pages.length == 0 || props.pages[props.pages.length - 1] >= props.pages ? 'disabled' : ''}`}>
-                        <Link href={`/search?query=${props.router.query.query}&from=${props.size * (props.page)}&size=${props.size}`}>
-                            <a className="page-link" tabIndex="-1">&gt;</a>
-                        </Link>
-                    </li>
-                </ul>
-            </nav>
+            <Paginator pages={props.pages} page={props.page} size={props.size} query={props.router.query.query} pages={props.pages} ></Paginator>
             {props.hits.hits.map(hit => <SearchResult key={hit._id} item={hit._source} score={hit._score} />)}
+            <Paginator pages={props.pages} page={props.page} size={props.size} query={props.router.query.query} pages={props.pages} ></Paginator>
         </div>
     </PageContainer>
 ));
