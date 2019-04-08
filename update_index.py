@@ -33,13 +33,76 @@ def add_to_index(posting):
         input(str(response.status_code) + ': ' + str(response.json()))
 
 
-if __name__ == '__main__':
+def drop_index():
     response = requests.delete(BASE_URL)
     if response.status_code == 200:
         input("Deleted all postings")
     else:
         input('Error in deleting postings')
 
+
+def update_index_properties():
+    data = {
+        "mappings": {
+            "_doc": {
+                "properties": {
+                    "title": {
+                        "type": "text",
+                        "analyzer": "text_analyzer",
+                        "search_analyzer": "text_analyzer",
+                        "boost": 2
+                    },
+                    "site": {
+                        "type": "keyword"
+                    },
+                    "url": {
+                        "type": "keyword"
+                    },
+                    "datePosted": {
+                        "type": "date",
+                        "format": "yyyy-MM-dd HH:mm"
+                    },
+                    "description": {
+                        "type": "text",
+                        "analyzer": "text_analyzer",
+                        "search_analyzer": "text_analyzer",
+                    },
+                    "hiredBy": {
+                        "type": "text"
+                    }
+                }
+            }
+        },
+        "settings": {
+            "index": {
+                "number_of_shards": 1,
+                "number_of_replicas": 0
+            },
+            "analysis": {
+                "analyzer": {
+                    "text_analyzer": {
+                        "tokenizer": "standard",
+                        "filter": ["lowercase", "stemmer_filter"]
+                    }
+                },
+                "filter": {
+                    "stemmer_filter": {
+                        "type": "stemmer",
+                        "name": "english"
+                    }
+                }
+            }
+        }
+    }
+    response = requests.put(BASE_URL, data=json.dumps(data), headers=HEADERS)
+    if response.status_code == 200:
+        input("Updated index properties")
+    else:
+        print(response)
+        input('Error in updating index properties')
+
+
+def add_documents():
     with open("data/craigslist.txt") as craigslist:
         for posting_str in craigslist.readlines():
             add_to_index(posting_str)
@@ -51,3 +114,9 @@ if __name__ == '__main__':
     with open("data/oodle.txt") as oodle:
         for posting_str in oodle.readlines():
             add_to_index(posting_str)
+
+
+if __name__ == '__main__':
+    drop_index()
+    update_index_properties()
+    add_documents()

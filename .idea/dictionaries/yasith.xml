@@ -2,6 +2,7 @@
   <dictionary name="yasith">
     <words>
       <w>oodle</w>
+      <w>stemmer</w>
     </words>
   </dictionary>
 </component>
