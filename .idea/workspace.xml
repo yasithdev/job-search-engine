@@ -3,6 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="f775cae9-a10b-4b55-8d66-fb9dcfaca3e2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webui/components/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/webui/components/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webui/components/PageContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/webui/components/PageContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webui/components/SearchBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/webui/components/SearchBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webui/components/SearchResult.js" beforeDir="false" afterPath="$PROJECT_DIR$/webui/components/SearchResult.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webui/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/webui/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webui/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/webui/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webui/pages/about.js" beforeDir="false" afterPath="$PROJECT_DIR$/webui/pages/about.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webui/pages/search.js" beforeDir="false" afterPath="$PROJECT_DIR$/webui/pages/search.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -11,7 +19,20 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/update_index.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="735">
+              <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
+              <folding>
+                <element signature="e#109#120#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -154,12 +175,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1554589679634</updated>
-      <workItem from="1554589681204" duration="21378000" />
+      <workItem from="1554589681204" duration="22585000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21378000" />
+    <option name="totallyTimeSpent" value="22585000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -172,6 +193,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1920" height="1018" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19477054" />
@@ -326,8 +348,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/update_index.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="48" column="37" selection-start-line="48" selection-start-column="37" selection-end-line="48" selection-end-column="37" />
+        <state relative-caret-position="735">
+          <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
           <folding>
             <element signature="e#109#120#0" expanded="true" />
           </folding>

@@ -1,15 +1,20 @@
 import Header from './Header'
-
-const layoutStyle = {
-  margin: 20,
-  padding: 20,
-  border: '1px solid #DDD'
-}
+import Head from 'next/head';
+import "../styles.scss"
 
 const PageContainer = (props) => (
-  <div style={layoutStyle}>
+  <div className="container bg-light">
+      <Head>
+        <title>Job Search Engine</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"/>
+    </Head>
     <Header />
-    {props.children}
+    <div className="row">
+      <div className="col">
+        {props.children}
+      </div>
+    </div>
   </div>
 )
 

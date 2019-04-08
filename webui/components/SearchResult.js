@@ -1,23 +1,39 @@
 import Link from 'next/link'
+import moment from 'moment'
 
-const titleStyle = {
-    marginRight: 15
+function truncate(str, num) {
+    if (str.length > num) {
+        return str.slice(0, num) + "...";
+    }
+    else {
+        return str;
+    }
 }
 
-const bodyStyle = {
-    marginLeft: 15
+function postedInfo(date, employee, score) {
+    if (date || employee) {
+        return <span>Posted{date? <b> {moment(date).fromNow()}</b> : null}{employee ? ` by ${employee}` : null} | Score: {score}</span>;
+    } else {
+        return null
+    }
 }
 
 const SearchResult = props => (
-    <Link href={props.item.url}>
-        <div>
-            <a style={titleStyle}>{props.item.title}</a>
-            <p>Site: {props.item.site}</p>
-            <p>Posted On: {props.item.datePosted}</p>
-            <p>Hired By: {props.item.hiredBy}</p>
-            <a style={bodyStyle}>{props.item.description}</a>
+    <div className="col card w-100 mb-2 border-light">
+        <div className="card-body">
+            <h5 className="card-title">
+                <Link href={props.item.url}><a>{props.item.title}</a></Link>
+            </h5>
+            <h6 className="card-subtitle mb-1">
+                <Link href={props.item.url}><a className="text-success">{props.item.url}</a></Link>
+            </h6>
+            <p className="card-text">
+                {truncate(props.item.description, 250)}
+                <br />
+                <small className="text-muted" children={postedInfo(props.item.datePosted, props.item.hiredBy, props.score)}></small>
+            </p>
         </div>
-    </Link>
+    </div>
 )
 
 export default SearchResult

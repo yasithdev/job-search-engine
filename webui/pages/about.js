@@ -1,11 +1,8 @@
-import Link from 'next/link'
 import PageContainer from '../components/PageContainer';
 
 const Page = () => (
     <PageContainer>
-        <div>
-            <p>Lorem Ipsum</p>
-        </div>
+        <p className="">Lorem Ipsum</p>
     </PageContainer>
 )
 
