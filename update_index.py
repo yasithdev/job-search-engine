@@ -47,3 +47,7 @@ if __name__ == '__main__':
     with open("data/theladders.txt") as theladders:
         for posting_str in theladders.readlines():
             add_to_index(posting_str)
+
+    with open("data/oodle.txt") as oodle:
+        for posting_str in oodle.readlines():
+            add_to_index(posting_str)
