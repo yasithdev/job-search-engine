@@ -1,6 +1,10 @@
 # -*- coding: utf-8 -*-
+import datetime
+
 import scrapy
 from scrapy.responsetypes import Response
+
+from crawler.spiders.common import approximate_datetime
 
 
 class CraigslistSpider(scrapy.Spider):
@@ -10,11 +14,14 @@ class CraigslistSpider(scrapy.Spider):
 
     def parse(self, response: Response):
         for result_row in response.css('div.job-card-text-container'):
+            date_str = ' '.join(
+                ' '.join(x.strip() for x in result_row.css('p.posted-date ::text').getall() if x.strip()).split(' ')[
+                1:4])
             result = {
                 'title': result_row.css('a.job-card-title::text').get(),
                 'site': 'theladders',
                 'url': response.urljoin(result_row.css('a.job-card-title::attr(href)').get()),
-                'datePosted': None,
+                'datePosted': approximate_datetime(datetime.datetime.now(), date_str),
                 'description': result_row.css('p.job-card-description::text').get(),
                 'hiredBy': result_row.css('div.job-card-sub-header *::text').get(),
             }
