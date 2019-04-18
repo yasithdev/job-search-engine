@@ -3,8 +3,10 @@
 # REQUIREMENTS
 # 1. Elasticsearch running on port 9200
 
+import codecs
 # importing the json library
 import json
+import re
 from hashlib import md5
 
 # importing the requests library
@@ -21,13 +23,14 @@ def make_url(posting_id: str, create: bool = False):
 
 def add_to_index(posting):
     # calculate id for posting
-    posting_id = md5(json.loads(posting)['url'].encode()).hexdigest()
+    posting_id = md5(posting['url'].encode('utf-8')).hexdigest()
+    posting_str = json.dumps(posting, ensure_ascii=False)
     # try creating first
-    response = requests.put(url=make_url(posting_id, True), data=posting, headers=HEADERS)
+    response = requests.put(url=make_url(posting_id, True), data=posting_str.encode('utf-8'), headers=HEADERS)
     if response.status_code == 201:
         print('Added Document: ' + posting_id)
     elif response.status_code == 409:
-        requests.put(url=make_url(posting_id), data=posting, headers=HEADERS)
+        requests.put(url=make_url(posting_id), data=posting_str.encode('utf-8'), headers=HEADERS)
         print('Updated Document: ' + posting_id)
     else:
         input(str(response.status_code) + ': ' + str(response.json()))
@@ -102,21 +105,37 @@ def update_index_properties():
         input('Error in updating index properties')
 
 
-def add_documents():
-    with open("data/craigslist.txt") as craigslist:
+allowed_cities = r'(?i)(norfolk|chesapeake|suffolk|virginia\sbeach)[^.]'
+
+
+def filter_documents():
+    d = []
+    with codecs.open("data/craigslist.txt", "r", "utf-8") as craigslist:
         for posting_str in craigslist.readlines():
-            add_to_index(posting_str)
+            # Only select records that contain the term norfolk in them
+            if re.search(allowed_cities, posting_str) is not None:
+                d.append(json.loads(posting_str, encoding='utf-8'))
 
-    with open("data/theladders.txt") as theladders:
+    with codecs.open("data/theladders.txt", "r", "utf-8") as theladders:
         for posting_str in theladders.readlines():
-            add_to_index(posting_str)
+            # Only select records that contain the term norfolk in them
+            if re.match(allowed_cities, posting_str) is not None:
+                d.append(json.loads(posting_str, encoding='utf-8'))
 
-    with open("data/oodle.txt") as oodle:
+    with codecs.open("data/oodle.txt", "r", "utf-8") as oodle:
         for posting_str in oodle.readlines():
-            add_to_index(posting_str)
+            # Only select records that contain the term norfolk in them
+            if re.match(allowed_cities, posting_str) is not None:
+                d.append(json.loads(posting_str, encoding='utf-8'))
+    return d
 
 
 if __name__ == '__main__':
     drop_index()
     update_index_properties()
-    add_documents()
+    documents = filter_documents()
+    input('%d documents found' % len(documents))
+    with codecs.open('data.json', 'w', encoding='utf=8') as out:
+        out.write(json.dumps(documents, ensure_ascii=False))
+    for doc in documents:
+        add_to_index(doc)
