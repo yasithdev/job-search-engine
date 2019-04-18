@@ -12,7 +12,7 @@ class CraigslistSpider(scrapy.Spider):
         for result_row in response.css('div.job-card-text-container'):
             result = {
                 'title': result_row.css('a.job-card-title::text').get(),
-                'site': 'TheLadders',
+                'site': 'theladders',
                 'url': response.urljoin(result_row.css('a.job-card-title::attr(href)').get()),
                 'datePosted': None,
                 'description': result_row.css('p.job-card-description::text').get(),

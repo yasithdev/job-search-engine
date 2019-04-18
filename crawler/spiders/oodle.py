@@ -56,7 +56,7 @@ class CraigslistSpider(scrapy.Spider):
         for result_row in response.css('li.listing'):
             result = {
                 'title': result_row.css('span.listing-title a.title-link::text').get(),
-                'site': 'Oodle',
+                'site': 'oodle',
                 'url': response.urljoin(result_row.css('span.listing-title a.title-link::attr(href)').get()),
                 'datePosted': approximate_datetime(datetime.datetime.now(), result_row.css('*.posted-on > span *::text').get()),
                 'description': ' '.join(result_row.css('div.listing-main div.listing-body *::text').getall()),

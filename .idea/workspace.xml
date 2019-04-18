@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f775cae9-a10b-4b55-8d66-fb9dcfaca3e2" name="Default Changelist" comment="" />
+    <list default="true" id="f775cae9-a10b-4b55-8d66-fb9dcfaca3e2" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/yasith.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/yasith.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crawler/pipelines.py" beforeDir="false" afterPath="$PROJECT_DIR$/crawler/pipelines.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crawler/spiders/craigslist.py" beforeDir="false" afterPath="$PROJECT_DIR$/crawler/spiders/craigslist.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crawler/spiders/oodle.py" beforeDir="false" afterPath="$PROJECT_DIR$/crawler/spiders/oodle.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crawler/spiders/theladders.py" beforeDir="false" afterPath="$PROJECT_DIR$/crawler/spiders/theladders.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/craigslist.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/craigslist.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/oodle.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/oodle.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/theladders.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/theladders.txt" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -11,22 +21,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/update_index.py">
+        <entry file="file://$PROJECT_DIR$/data/craigslist.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="51" column="45" selection-start-line="51" selection-start-column="45" selection-end-line="51" selection-end-column="45" />
-              <folding>
-                <element signature="e#109#120#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitattributes">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="50" lean-forward="true" selection-start-line="2" selection-start-column="50" selection-end-line="2" selection-end-column="50" />
+            <state relative-caret-position="1470">
+              <caret line="98" column="51" selection-start-line="98" selection-start-column="51" selection-end-line="98" selection-end-column="51" />
             </state>
           </provider>
         </entry>
@@ -34,26 +32,32 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data/oodle.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="188">
-              <caret line="276" column="663" selection-start-line="276" selection-start-column="656" selection-end-line="276" selection-end-column="663" />
+            <state relative-caret-position="183">
+              <caret line="28" column="12" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/crawler/spiders/oodle.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="256">
+              <caret line="57" column="87" lean-forward="true" selection-start-line="57" selection-start-column="87" selection-end-line="57" selection-end-column="87" />
+              <folding>
+                <element signature="e#24#39#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/craigslist.txt">
+        <entry file="file://$PROJECT_DIR$/crawler/pipelines.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="2851" column="85" selection-start-line="2851" selection-start-column="85" selection-end-line="2851" selection-end-column="85" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/theladders.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="5769" column="155" selection-start-line="5769" selection-start-column="148" selection-end-line="5769" selection-end-column="155" />
+            <state relative-caret-position="330">
+              <caret line="28" column="19" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="19" />
+              <folding>
+                <element signature="e#193#206#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -77,6 +81,9 @@
       <find>hiredBy</find>
       <find>norfolk, VA</find>
       <find>norfolk</find>
+      <find>&quot;date</find>
+      <find>datePosted</find>
+      <find>json.dumps</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -87,20 +94,22 @@
       <list>
         <option value="$PROJECT_DIR$/craigslist.txt" />
         <option value="$PROJECT_DIR$/crawler/settings.py" />
-        <option value="$PROJECT_DIR$/crawler/spiders/craigslist.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/crawler/pipelines.py" />
-        <option value="$PROJECT_DIR$/crawler/spiders/theladders.py" />
         <option value="$PROJECT_DIR$/.gitattributes" />
-        <option value="$PROJECT_DIR$/crawler/spiders/oodle.py" />
+        <option value="$PROJECT_DIR$/data/craigslist.txt" />
         <option value="$PROJECT_DIR$/update_index.py" />
+        <option value="$PROJECT_DIR$/crawler/spiders/craigslist.py" />
+        <option value="$PROJECT_DIR$/crawler/spiders/oodle.py" />
+        <option value="$PROJECT_DIR$/crawler/spiders/theladders.py" />
+        <option value="$PROJECT_DIR$/crawler/pipelines.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="367" />
-    <option name="width" value="1920" />
-    <option name="height" value="713" />
+    <option name="x" value="1200" />
+    <option name="y" value="412" />
+    <option name="width" value="900" />
+    <option name="height" value="720" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -114,6 +123,17 @@
             <path>
               <item name="job-search-engine" type="b2602c69:ProjectViewProjectNode" />
               <item name="job-search-engine" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="job-search-engine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="job-search-engine" type="462c0819:PsiDirectoryNode" />
+              <item name="crawler" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="job-search-engine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="job-search-engine" type="462c0819:PsiDirectoryNode" />
+              <item name="crawler" type="462c0819:PsiDirectoryNode" />
+              <item name="spiders" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="job-search-engine" type="b2602c69:ProjectViewProjectNode" />
@@ -199,12 +219,23 @@
       <option name="presentableId" value="Default" />
       <updated>1554589679634</updated>
       <workItem from="1554589681204" duration="23573000" />
-      <workItem from="1554732046442" duration="5001000" />
+      <workItem from="1554732046442" duration="13992000" />
+      <workItem from="1554822412042" duration="2487000" />
+      <workItem from="1555553828661" duration="253000" />
+      <workItem from="1555554795489" duration="2963000" />
     </task>
+    <task id="LOCAL-00001" summary="add method to update index properties, including stemming, boosts, etc">
+      <created>1554763331474</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1554763331474</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28574000" />
+    <option name="totallyTimeSpent" value="43268000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -216,14 +247,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="409" width="1920" height="1018" extended-state="6" />
+    <frame x="1200" y="412" width="1920" height="1043" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19690502" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20330843" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3295838" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.511811" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.48143983" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -232,7 +264,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50053364" side_tool="true" weight="0.6152981" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4994664" visible="true" weight="0.2969629" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4994664" visible="true" weight="0.34288865" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -267,8 +299,12 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add method to update index properties, including stemming, boosts, etc" />
+    <option name="LAST_COMMIT_MESSAGE" value="add method to update index properties, including stemming, boosts, etc" />
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/job_search_engine$update_index.coverage" NAME="update_index Coverage Results" MODIFIED="1554667392575" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/job_search_engine$update_index.coverage" NAME="update_index Coverage Results" MODIFIED="1554823868281" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/main.py" />
@@ -276,37 +312,10 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/crawled.txt" />
-    <entry file="file://$PROJECT_DIR$/crawler/items.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crawler/middlewares.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1260">
-          <caret line="84" lean-forward="true" selection-start-line="84" selection-end-line="84" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="222">
           <caret line="104" selection-start-line="104" selection-end-line="104" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crawler/pipelines.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="22" column="25" lean-forward="true" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
-          <folding>
-            <element signature="e#193#204#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crawler/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="29" column="19" lean-forward="true" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -317,10 +326,51 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/crawler/items.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crawler/middlewares.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1260">
+          <caret line="84" selection-start-line="84" selection-end-line="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crawler/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="19" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitattributes">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="50" selection-start-line="2" selection-start-column="50" selection-end-line="2" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/theladders.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="86625">
+          <caret line="5775" column="145" selection-start-line="5775" selection-start-column="135" selection-end-line="5775" selection-end-column="145" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/update_index.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="110" column="46" selection-start-line="110" selection-start-column="46" selection-end-line="110" selection-end-column="46" />
+          <folding>
+            <element signature="e#109#120#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/crawler/spiders/theladders.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="7" column="42" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="42" />
+        <state relative-caret-position="240">
+          <caret line="16" column="31" lean-forward="true" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
           <folding>
             <element signature="e#24#37#0" expanded="true" />
           </folding>
@@ -329,59 +379,45 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/crawler/spiders/craigslist.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="7" column="46" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="46" />
+        <state relative-caret-position="360">
+          <caret line="25" column="32" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
           <folding>
             <element signature="e#24#37#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/crawler/spiders/oodle.py">
+    <entry file="file://$PROJECT_DIR$/crawler/pipelines.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="69" column="64" selection-start-line="69" selection-start-column="64" selection-end-line="69" selection-end-column="64" />
+        <state relative-caret-position="330">
+          <caret line="28" column="19" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="19" />
           <folding>
-            <element signature="e#24#39#0" expanded="true" />
+            <element signature="e#193#206#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/oodle.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="276" column="663" selection-start-line="276" selection-start-column="656" selection-end-line="276" selection-end-column="663" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/data/craigslist.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="2851" column="85" selection-start-line="2851" selection-start-column="85" selection-end-line="2851" selection-end-column="85" />
+        <state relative-caret-position="1470">
+          <caret line="98" column="51" selection-start-line="98" selection-start-column="51" selection-end-line="98" selection-end-column="51" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/theladders.txt">
+    <entry file="file://$PROJECT_DIR$/data/oodle.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="5769" column="155" selection-start-line="5769" selection-start-column="148" selection-end-line="5769" selection-end-column="155" />
+        <state relative-caret-position="183">
+          <caret line="28" column="12" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/update_index.py">
+    <entry file="file://$PROJECT_DIR$/crawler/spiders/oodle.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="51" column="45" selection-start-line="51" selection-start-column="45" selection-end-line="51" selection-end-column="45" />
+        <state relative-caret-position="256">
+          <caret line="57" column="87" lean-forward="true" selection-start-line="57" selection-start-column="87" selection-end-line="57" selection-end-column="87" />
           <folding>
-            <element signature="e#109#120#0" expanded="true" />
+            <element signature="e#24#39#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitattributes">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="50" lean-forward="true" selection-start-line="2" selection-start-column="50" selection-end-line="2" selection-end-column="50" />
         </state>
       </provider>
     </entry>

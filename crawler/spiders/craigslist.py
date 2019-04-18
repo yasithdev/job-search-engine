@@ -19,7 +19,7 @@ class CraigslistSpider(scrapy.Spider):
         for result_row in response.css('li.result-row'):
             item = {
                 'title': result_row.css('a.result-title::text').get(),
-                'site': 'CraigsList',
+                'site': 'craigslist',
                 'url': response.urljoin(result_row.css('a.result-title::attr(href)').get()),
                 'datePosted': result_row.css('time.result-date::attr(datetime)').get(),
                 'description': None,  # description added in sub crawl
