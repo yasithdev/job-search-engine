@@ -53,7 +53,7 @@ def update_index_properties():
                         "type": "text",
                         "analyzer": "text_analyzer",
                         "search_analyzer": "text_analyzer",
-                        "boost": 2
+                        "boost": 3
                     },
                     "site": {
                         "type": "keyword"
@@ -69,6 +69,7 @@ def update_index_properties():
                         "type": "text",
                         "analyzer": "text_analyzer",
                         "search_analyzer": "text_analyzer",
+                        "boost": 2
                     },
                     "hiredBy": {
                         "type": "text"
@@ -119,13 +120,13 @@ def filter_documents():
     with codecs.open("data/theladders.txt", "r", "utf-8") as theladders:
         for posting_str in theladders.readlines():
             # Only select records that contain the term norfolk in them
-            if re.match(allowed_cities, posting_str) is not None:
+            if re.search(allowed_cities, posting_str) is not None:
                 d.append(json.loads(posting_str, encoding='utf-8'))
 
     with codecs.open("data/oodle.txt", "r", "utf-8") as oodle:
         for posting_str in oodle.readlines():
             # Only select records that contain the term norfolk in them
-            if re.match(allowed_cities, posting_str) is not None:
+            if re.search(allowed_cities, posting_str) is not None:
                 d.append(json.loads(posting_str, encoding='utf-8'))
     return d
 
