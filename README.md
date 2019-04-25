@@ -1,8 +1,8 @@
-# job-search-engine
+# Job Search Engine
 Specialized Search Engine for Jobs in Norfolk, including Crawler, Indexer and Search Interface
 
-# Setting up on Local Machine
+## Setting up on Local Machine
 
-# Crawling and Indexing
+## Crawling and Indexing
 
-# Running the Search Interface
+## Running the Search Interface
