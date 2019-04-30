@@ -25,10 +25,13 @@ job-search-engine
 
 ### Prerequisites
 * Python (version 3.x)
-* NodeJS (version 10.x or greater)
-* npm
+* NodeJS (version 10.x or greater) and NPM
+* Elasticsearch running on port 9200
+* Kibana running on port 5601 (optional)
 
-(python, node and npm should be added to path)
+**Note: If you have ```docker``` and ```docker-compose``` on the local machine, you can
+start Elasticsearch, Kibana and the Search UI using the command ```docker-compose up```.
+Else, you should have them running on ports 9200, 5601 and 3000 to work correctly.**
 
 ### Cloning the Repository
 ```bash

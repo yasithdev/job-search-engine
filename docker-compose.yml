@@ -1,0 +1,29 @@
+version: '3.7'
+services:
+  # Elasticsearch
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:6.7.1
+    restart: on-failure
+    environment:
+      - discovery.type=single-node
+    ports:
+      - 9200:9200
+    network_mode: host
+  # Kibana
+  kibana:
+    image: docker.elastic.co/kibana/kibana:6.7.1
+    restart: on-failure
+    ports:
+      - 5601:5601
+    network_mode: host
+  # Search UI
+  web:
+    image: node:lts-alpine
+    restart: on-failure
+    working_dir: /app
+    volumes:
+      - ./webui:/app
+    command: "npm run start"
+    ports:
+      - 3000:3000
+    network_mode: host

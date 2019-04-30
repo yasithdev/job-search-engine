@@ -3,6 +3,9 @@
     <words>
       <w>alnum</w>
       <w>craigslist</w>
+      <w>elasticsearch</w>
+      <w>fielddata</w>
+      <w>kibana</w>
       <w>oodle</w>
       <w>sbeach</w>
       <w>stemmer</w>
